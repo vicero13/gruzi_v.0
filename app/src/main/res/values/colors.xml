@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //Primary
+    <color name="cioccolato">#56260E</color>
+    //Complementary
+    <color name="tarawera">#0E3E56</color>
+    //Analogous
+    <color name="maroon_oak">#560E1A</color>
+    <color name="bronze_olive">#564A0E</color>
+    //Triadic
+    <color name="clover">#3E560E</color>
+    <color name="parsley">#0E5626</color>
+
+    <color name="desert_sand">#EFC2A6</color>
+    <color name="polo_blue">#94B9D2</color>
 </resources>
