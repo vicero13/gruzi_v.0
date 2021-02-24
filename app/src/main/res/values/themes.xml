@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.Gruzi_v0" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/desert_sand</item>
-        <item name="colorPrimaryVariant">@color/cioccolato</item>
-        <item name="colorOnPrimary">@color/desert_sand</item>
+        <item name="colorPrimary">@color/tarawera</item>
+        <item name="colorPrimaryVariant">@color/jagged_ice</item>
+        <item name="colorOnPrimary">@color/catskill_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/tarawera</item>
         <item name="colorSecondaryVariant">@color/parsley</item>
@@ -12,5 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
     </style>
 </resources>

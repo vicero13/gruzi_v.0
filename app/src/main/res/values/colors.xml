@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     //Primary
+    <color name="cio_900">#471800</color>
     <color name="cioccolato">#56260E</color>
     //Complementary
     <color name="tarawera">#0E3E56</color>
@@ -20,5 +21,18 @@
     <color name="parsley">#0E5626</color>
 
     <color name="desert_sand">#EFC2A6</color>
+    <color name="tequila">#FFE4C6</color>
     <color name="polo_blue">#94B9D2</color>
+    <color name="jagged_ice">#B5E3E0</color>
+    <color name="pattens_blue">#D9F0FF</color>
+    <color name="daintree">#002A3E</color>
+    <color name="catskill_white">#E1F3F3</color>
+
+    <color name="tory_blue">#0D5DA5</color>
+    <color name="malibu">#84D8FF</color>
+    <color name="horizon">#5787A6</color>
+    <color name="golden_dream">#F4E62C</color>
+
+
+    <color name="selected">@color/items_nav_bar</color>
 </resources>

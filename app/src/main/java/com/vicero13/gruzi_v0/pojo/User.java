@@ -5,14 +5,16 @@ public class User {
     private String name;
     private int phoneNumber;
     private String password;
+    private String city;
     private String email;
     private Car car;
 
-    public User(int id, String name, int phoneNumber, String password) {
+    public User(int id, String name, int phoneNumber, String password, String city) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.password = password;
+        this.city = city;
     }
 
     public int getId() {
@@ -53,6 +55,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public Car getCar() {

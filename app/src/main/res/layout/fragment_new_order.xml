@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_fromStreet"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="From..."
+        app:helperText="street and house"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_newOrderFromStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_toStreet"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:helperText="street and house"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_fromStreet">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_newOrderToStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To..."
+            android:inputType="textPostalAddress"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_newOrderStartTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Start time: "
+        android:textColor="@color/tarawera"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_newOrderTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cont_toStreet"
+        app:layout_constraintTop_toBottomOf="@+id/cont_toStreet" />
+
+    <TextView
+        android:id="@+id/tv_newOrderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textColor="@color/tarawera"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/tv_newOrderStartTimeText"
+        app:layout_constraintStart_toEndOf="@+id/tv_newOrderStartTimeText"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <TextView
+        android:id="@+id/tv_newOrderDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16sp"
+        android:text="Date: "
+        android:textColor="@color/tarawera"
+        app:layout_constraintEnd_toStartOf="@+id/tv_newOrderData"
+        app:layout_constraintTop_toBottomOf="@+id/cont_toStreet" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_newOrderData"
+        android:textSize="16sp"
+        android:textColor="@color/tarawera"
+        android:text="23.06.2020 y."
+        app:layout_constraintEnd_toEndOf="@+id/cont_toStreet"
+        app:layout_constraintTop_toBottomOf="@+id/cont_toStreet"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/br1"
+        app:barrierDirection="top"
+        app:barrierMargin="15dp"
+        app:constraint_referenced_ids="cont_width,cont_height,cont_length"
+        app:layout_constraintTop_toBottomOf="@id/tv_newOrderDataText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_length"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperTextEnabled="true"
+        app:helperText="cm, max"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/cont_width"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/br1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="length" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_width"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperTextEnabled="true"
+        app:helperText="cm, max"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/cont_height"
+        app:layout_constraintStart_toEndOf="@id/cont_length"
+        app:layout_constraintTop_toBottomOf="@id/br1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="width" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_height"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperTextEnabled="true"
+        app:helperText="cm, max"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cont_width"
+        app:layout_constraintTop_toBottomOf="@id/br1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="height" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="cont_capacity" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_capacity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:helperText="cargo"
+        app:helperTextEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_length"
+        app:layout_constraintEnd_toStartOf="@+id/cont_maxWeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="capacity" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="120dp"
+        android:id="@+id/cont_maxWeight"
+        app:helperTextEnabled="true"
+        app:helperText="kg"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintStart_toEndOf="@+id/cont_capacity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_length"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_maxWeight"
+            android:inputType="number"
+            android:hint="max weight"
+            android:gravity="center"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~ dimensions"
+        android:textColor="@color/tarawera"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_capacity"
+        app:layout_constraintEnd_toStartOf="@+id/checkboxTypePay"/>
+
+    <CheckBox
+        android:id="@+id/checkboxTypePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="transfer to card"
+        android:textColor="@color/tarawera"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkbox"
+        app:layout_constraintTop_toTopOf="@+id/checkbox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clear"
+        android:text="clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_save"
+        android:text="save"
+        app:layout_constraintStart_toEndOf="@+id/btn_clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
